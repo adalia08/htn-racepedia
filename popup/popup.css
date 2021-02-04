@@ -1,0 +1,72 @@
+
+button {
+  height: 60px;
+  width: 120px;
+  outline: none;
+  font-family: 'Press Start 2P', cursive;
+  background-color: #F0543C;
+  box-shadow: 6px 6px #ac4141;
+  margin: 0 auto;
+  display: block;
+}
+
+button:hover {
+  background-color: #EC8465; /* Green */
+  color: #ffffde;
+}
+
+h1 {
+  color: #ac4141;
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 16px;
+}
+body{
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  transition: all 400ms;
+}
+
+h2 {
+  color: black;
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  
+}
+
+.arrowset {
+  display: flex;
+  justify-content: center;
+  color: #ef5b48;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 16px;
+  animation-duration: 1.5s, 0.75s;
+  animation-name: slidein, scale;
+  animation-iteration-count: 1, infinite;
+  animation-direction: alternate;
+  animation-delay: 0s, 1s;
+}
+
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}
+
+@keyframes scale {
+  from {
+    transform: scale(1.0);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
+}

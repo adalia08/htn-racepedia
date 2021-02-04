@@ -1,0 +1,33 @@
+{
+    "manifest_version": 2,
+    "name": "Racepedia",
+    "version": "1.0",
+    "description": "automatically generates a start and end site, user needs to navigate it.",
+    "permissions": [
+        "activeTab", // For the current tab 
+        "storage", // For the tabs clicked
+        "declarativeContent",
+        "tabs", // executeScript
+        "webNavigation" // when user presses the back button
+    ],
+    "background": {
+        "scripts": ["js/background.js"],
+        "persistent": false
+    },
+    "browser_action" : { 
+        "default_popup": "popup/popup.html",
+        "default_icon" : "images/icon.png"
+    },
+    "content_scripts": [
+        {
+          "matches": ["http://*.nytimes.com/*"],
+          "js": ["popup/contentScript.js"]
+        }
+      ],
+    "icons": {
+        "16": "images/icon.png",
+        "32": "images/icon.png",
+        "48": "images/icon.png",
+        "128":"images/icon.png"
+    }
+}
